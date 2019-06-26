@@ -7,8 +7,17 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context){
     return MaterialApp(
       home: Scaffold(
+        drawer: Drawer(),
         floatingActionButton: FloatingActionButton(),
-        appBar: AppBar(title: Text("My First"),),
+        appBar: AppBar(title: Text("My First App"),),
+        body: Card(
+          child: Column(
+            children: <Widget>[
+              Image.asset("./assets/image-1.png"),
+              Text("Hello")
+            ],
+          ),
+        ),
       ),
     );
   }
