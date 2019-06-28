@@ -1,24 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/page1.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget{
-  @override 
-  Widget build(BuildContext context){
-    return MaterialApp(
-      home: Scaffold(
-        drawer: Drawer(),
-        floatingActionButton: FloatingActionButton(),
-        appBar: AppBar(title: Text("My First App"),),
-        body: Card(
-          child: Column(
-            children: <Widget>[
-              Image.asset("./assets/image-1.png"),
-              Text("Hello")
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+  @override
+  Widget build(BuildContext context) => MaterialApp(
+    home: Page1(),
+  );
 }
