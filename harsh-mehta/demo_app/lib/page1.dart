@@ -44,6 +44,12 @@ class Page1 extends StatelessWidget{
                     child: Text("LOGIN"),
                     textColor: Colors.white,
                     color: Colors.blue,
+                  ),
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text("This button is of no use"),
+                    textColor: Colors.white,
+                    color: Colors.blue,
                   )
               ],
             )
