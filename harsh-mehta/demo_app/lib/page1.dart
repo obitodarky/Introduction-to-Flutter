@@ -6,23 +6,51 @@ class Page1 extends StatelessWidget{
   Widget build(BuildContext context){
     return MaterialApp(
       home: Scaffold(
-        drawer: Drawer(),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.push(context, MaterialPageRoute(
-            builder: (context) => Page2()
-          ));
-          }
+        body: Center(
+          child: Container(
+            margin: const EdgeInsets.all(20.0),
+            child: ListView(
+              padding: EdgeInsets.symmetric(horizontal: 10.0),
+              children: <Widget>[
+                SizedBox(height: 50.0,), 
+                Container(
+                  height: 96.0,
+                  width: 96.0,
+                  child: Image.asset("assets/login-image.png"),
+                ),
+                SizedBox(height: 30.0,),
+                TextField(
+                  obscureText: false,
+                  textCapitalization: TextCapitalization.none,
+                  autofocus: true,
+                  decoration: InputDecoration(
+                    labelText: "Email"
+                    ),
+                  ),
+                  SizedBox(height: 10.0,),
+                  TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    labelText: "Password"
+                    ),
+                  ),
+                  SizedBox(height: 10.0,),
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(context, new MaterialPageRoute(
+                        builder: (context) => Page2()
+                      ));
+                    },
+                    child: Text("LOGIN"),
+                    textColor: Colors.white,
+                    color: Colors.blue,
+                  )
+              ],
+            )
+
+          )
         ),
-        appBar: AppBar(title: Text("Page 1"),),
-        body: Card(
-          child: Column(
-            children: <Widget>[
-              Text("Hello")
-            ],
-          ),
-        ),
-      ),
+      )
     );
   }
 }

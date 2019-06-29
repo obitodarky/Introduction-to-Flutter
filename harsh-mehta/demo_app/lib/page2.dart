@@ -1,20 +1,31 @@
 import 'package:flutter/material.dart';
 
-
 class Page2 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
       return MaterialApp(
         home: Scaffold(
-          floatingActionButton: FloatingActionButton(
-            onPressed: (){
-              Navigator.pop(context);
-            },
-          ),
-          appBar: AppBar(title: Text("Page 2"),),
+          appBar: AppBar(title: Text("Hi"),),
           body: Center(
-            child: Text("Welcome"),
+            child: Container(
+              margin: const EdgeInsets.all(20.0),
+              child: ListView(
+                children: <Widget>[
+                  Center(
+                    child: Text("THIS APP SUCKS"),
+                  ),
+                  RaisedButton(
+                    color: Colors.blue,
+                    textColor: Colors.white,
+                    child: Text("BYE"),
+                    onPressed: (){
+                      Navigator.pop(context);
+                  },
+                )
+              ],
+            ),
           ),
+          )
         )
       );
     }
